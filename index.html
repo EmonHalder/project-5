@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <!-- bootstrap cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/670132467d.js" crossorigin="anonymous"></script>
+</head>
+<body class="container-xxl">
+
+    <!------ header ------->
+     <header class="d-flex justify-content-between bg-info-subtle bg-opacity-25 align-items-center px-4 py-2 mt-2">
+        <div> 
+            <h3 class=" fw-bold">Interactive <p class="fs-6 fw-semibold text-secondary">Geometry Genius</p></h3>
+            <!-- <p>(A+B) <sup>2</sup></p> -->
+        </div>
+        <div>
+            <button id="blog-btn" type="button" class="btn btn-primary px-4 fw-semibold">Blog</button>
+        </div>
+     </header>
+     <!------- main ------->
+     <main>
+        <section class="mt-5 p-4">
+            <div class="row row-cols-1 row-cols-md-4 g-4 row-cols-sm-1 g-4  ">
+              <!-- card no 1 -->
+                <div class="col text-center" >
+                  <div class="card h-100 randomColor" >
+                    <img src="image/triangle.png" class="card-img-top w-75 mx-auto p-4" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold mt-3 fs-4">Triangle</h5>
+                      <p class="card-text">Area (A) = 0.5 x b x h </p>
+                      <div class="d-flex justify-content-evenly align-items-center">
+                         <input id="TriangleB" type="text"  placeholder="b"  class="form-control text-center w-25"  ><span>cm</span>
+                         <input id="TriangleH" type="text" placeholder="h"  class="form-control text-center w-25"  ><span>cm</span>
+                        </div>
+                        <button id="triangle-calculate" type="button" class="btn btn-primary px-5 fw-semibold mt-5 w-75">Calculate</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- card no 2 -->
+
+                <div class="col text-center">
+                    <div class="card h-100 randomColor" >
+                      <img src="image/rectangle.png" class="card-img-top w-75 mx-auto py-4" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title fw-bold mt-3 fs-4">Rectangle</h5>
+                        <p class="card-text">Area (A) = w x I</p>
+                        <div class="d-flex justify-content-evenly align-items-center">
+                           <input id="Rectangle-w" type="text" placeholder="w"  class="form-control text-center w-25"  ><span>cm</span>
+                           <input id="Rectangle-i" type="text" placeholder="I"  class="form-control text-center w-25"  ><span>cm</span>
+                          </div>
+                          <button id="Rectangle-calculate" type="button" class="btn btn-primary px-5 fw-semibold mt-5 w-75">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card no 3 -->
+                  <div class="col text-center">
+                    <div class="card h-100 randomColor">
+                      <img src="image/parallelogram.png" class="card-img-top w-75 mx-auto py-4" alt="...">
+                      <div class="card-body mt-2">
+                        <h5 class="card-title fw-bold mt-3 fs-4">Parallelogram</h5>
+                        <p class="card-text">Area (A) = b x h</p>
+                        <p class="fs-5">b = 10cm, h = 12cm</p>
+                          <button id="Parallelogram-calculate" type="button" class="btn btn-primary px-5 fw-semibold mt-5 w-75">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-------- Area Calculation ------->
+                  <!-- card no 4 -->
+
+                  <div class="col ">
+                    <div class="card h-100">
+                       
+                      <div class="card-body">
+                        <h5 class="card-title text-center"><u>Area Calculation</u></h5>
+                        <p class="card-text">
+                          <p id="triangleOutput"></p>
+                          <p id="RectangleOutput"></p>
+                          <p id="ParallelogramOutput"></p>
+                          <p id="RhombusOutput"></p>
+                          <p id="PentagonOutput"></p>
+                          <p id="EllipseOutput"></p>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card no 5 -->
+                  <div class="col text-center">
+                    <div class="card h-100 randomColor">
+                      <img src="image/rhombus.png" class="card-img-top w-75 mx-auto p-4" alt="...">
+                      <div class="card-body mt-1">
+                        <h5 class="card-title fw-bold mt-3 fs-4">Rhombus</h5>
+                        <p class="card-text">Area (A) = 0.5 x d1 x d2  </p>
+                        <p class="fs-5">d1 = 16cm, d2 = 8cm</p>
+                          <button id="Rhombus-calculate" type="button" class="btn btn-primary px-5 fw-semibold mt-5  w-75">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card no 6 -->
+                  <div class="col text-center">
+                    <div class="card h-100 randomColor">
+                      <img src="image/pentagon.png" class="card-img-top w-50 mx-auto py-4" alt="...">
+                      <div class="card-body mt-2 ">
+                        <h5 class="card-title fw-bold   fs-4">Pentagon</h5>
+                        <p class="card-text">Area (A) = 0.5 x p x b</p>
+                        <p class="fs-5">p = 6cm, b = 10cm</p>
+                          <button id="Pentagon-calculate" type="button" class="btn btn-primary px-5 fw-semibold mt-5 w-75">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card no 7 -->
+                  <div class="col text-center">
+                    <div class="card h-100 randomColor">
+                      <img src="image/ellipse.png" class="card-img-top w-75 mb-4 mx-auto p-4" alt="...">
+                      <div class="card-body ">
+                        <h5 class="card-title fw-bold mt-2 fs-4">Ellipse</h5>
+                        <p class="card-text">Area (A) = <span class="fs-4">π</span>ab</p>
+                        <p class="fs-5">a = 10cm, b = 4cm</p>
+                          <button id="Ellipse-calculate" type="button" class="btn btn-primary px-5 fw-semibold mt-5 w-75">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </section>
+     </main>
+
+     
+     
+    <!-- bootstrap script link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Random color link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!------- javaScript link -------->
+    <script src="js/index.js"></script>
+    <script src="js/Common.js"></script>
+    
+</body>
+</html>
